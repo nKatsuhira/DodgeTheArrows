@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/button_fail.ogg-4b51cf47645d8684913792ba5eb989db.oggstr"
+
+[deps]
+
+source_file="res://misc/sounds/button_fail.ogg"
+dest_files=[ "res://.import/button_fail.ogg-4b51cf47645d8684913792ba5eb989db.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

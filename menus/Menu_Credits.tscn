@@ -1,0 +1,282 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://misc/font40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://misc/font56.tres" type="DynamicFont" id=2]
+[ext_resource path="res://menus/Menu_Credits.gd" type="Script" id=3]
+[ext_resource path="res://misc/font64.tres" type="DynamicFont" id=4]
+[ext_resource path="res://misc/font20.tres" type="DynamicFont" id=5]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Menu_Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1920, 1080 )
+color = Color( 0.113725, 0.815686, 0.85098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+margin_bottom = -922.0
+rect_min_size = Vector2( 1920, 78 )
+custom_fonts/font = ExtResource( 4 )
+text = "Credits"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpFrom" type="Label" parent="."]
+margin_left = 1470.0
+margin_top = 535.0
+margin_right = 1801.0
+margin_bottom = 584.0
+custom_fonts/font = ExtResource( 1 )
+text = "Special thanks to:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Streamfire" type="Label" parent="HelpFrom"]
+margin_left = 50.0
+margin_top = 48.0
+margin_right = 329.0
+margin_bottom = 117.0
+custom_fonts/font = ExtResource( 2 )
+text = "Streamfire"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadeWith" type="Label" parent="."]
+margin_left = 1610.0
+margin_top = 190.0
+margin_right = 1820.0
+margin_bottom = 239.0
+custom_fonts/font = ExtResource( 1 )
+text = "Made with:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Programs" type="Label" parent="MadeWith"]
+margin_left = -480.0
+margin_top = 50.0
+margin_right = 207.0
+margin_bottom = 335.0
+custom_fonts/font = ExtResource( 2 )
+text = "Godot
+Adobe After Effects
+Adobe Illustrator
+Image-Stitch (by Comeza)"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 815.0
+margin_top = 900.0
+margin_right = -815.0
+margin_bottom = -100.0
+rect_min_size = Vector2( 290, 80 )
+rect_pivot_offset = Vector2( 144, 40 )
+focus_mode = 0
+theme = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Music" type="Label" parent="."]
+margin_left = 100.0
+margin_top = 190.0
+margin_right = 396.0
+margin_bottom = 239.0
+custom_fonts/font = ExtResource( 1 )
+text = "Music used:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Artist" type="Label" parent="Music"]
+margin_top = 50.0
+margin_right = 772.0
+margin_bottom = 167.0
+custom_fonts/font = ExtResource( 2 )
+text = "Jesse Spillane - Half Hearted Revolution
+Jesse Spillane - Molten Snow
+Jesse Spillane - Number 0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Music/Artist"]
+margin_top = 195.0
+margin_right = 537.0
+margin_bottom = 220.0
+custom_fonts/font = ExtResource( 5 )
+text = "Licensed under Attribution 4.0 International (CC BY 4.0) "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpenLink" type="Button" parent="Music/Artist/Label"]
+margin_top = 35.0
+margin_right = 200.0
+margin_bottom = 75.0
+focus_mode = 0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Open Artist Page"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Font" type="Label" parent="."]
+margin_left = 100.0
+margin_top = 565.0
+margin_right = 298.0
+margin_bottom = 614.0
+custom_fonts/font = ExtResource( 1 )
+text = "Font used:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Font"]
+margin_top = 50.0
+margin_right = 360.0
+margin_bottom = 107.0
+custom_fonts/font = ExtResource( 2 )
+text = "Varela Round"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Author" type="Label" parent="Font/Text"]
+margin_top = 70.0
+margin_right = 221.0
+margin_bottom = 95.0
+custom_fonts/font = ExtResource( 5 )
+text = "Designed by Joe Prince"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpenLinkFont" type="Button" parent="Font"]
+margin_top = 155.0
+margin_right = 160.0
+margin_bottom = 195.0
+focus_mode = 0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Open Source"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Music/Artist/Label/OpenLink" to="." method="_on_OpenLink_pressed"]
+[connection signal="pressed" from="Font/OpenLinkFont" to="." method="_on_OpenLinkFont_pressed"]

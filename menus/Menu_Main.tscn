@@ -1,0 +1,527 @@
+[gd_scene load_steps=58 format=2]
+
+[ext_resource path="res://menus/main_titleIn.png" type="Texture" id=1]
+[ext_resource path="res://misc/font56.tres" type="DynamicFont" id=3]
+[ext_resource path="res://misc/font32.tres" type="DynamicFont" id=4]
+[ext_resource path="res://misc/font40.tres" type="DynamicFont" id=5]
+[ext_resource path="res://menus/Menu_Main.gd" type="Script" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 466, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 932, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 1398, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 1864, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 2330, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 2796, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 3262, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 3728, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 4194, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 4660, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 5126, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 5592, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 6058, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 6524, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 6990, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 7456, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 7922, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 8388, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 8854, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 0, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 466, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 932, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 1398, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 1864, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 2330, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 2796, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 3262, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 3728, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 4194, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 4660, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 5126, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 5592, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 6058, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 6524, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 6990, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 7456, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 7922, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 8388, 1920, 466 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1920, 8854, 1920, 466 )
+
+[sub_resource type="SpriteFrames" id=41]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
+"loop": false,
+"name": "titleIn",
+"speed": 30.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=42]
+content_margin_bottom = 10.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=43]
+content_margin_bottom = 10.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id=44]
+
+[sub_resource type="StyleBoxFlat" id=45]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=46]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=47]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id=48]
+
+[sub_resource type="StyleBoxFlat" id=49]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=50]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=51]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id=52]
+length = 0.9
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Start:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1080, 0, 0, 0.45, 0, 720, -0.45, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.65 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Author:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1080, 0, 0, 0.4, 0, 950, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0.1, 0.7 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Controls:rect_position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1080, 0, 0, 0.4, 0, 900, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0.15, 0.75 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Options:rect_position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1080, 0, 0, 0.4, 0, 900, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0.2, 0.8 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Credits:rect_position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1080, 0, 0, 0.4, 0, 900, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0.25, 0.85 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Version:rect_position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1080, 0, 0, 0.4, 0, 950, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0.3, 0.9 )
+}
+
+[node name="Menu_Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.00012207
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -0.00012207
+color = Color( 0.113725, 0.815686, 0.85098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleSequence" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 960, 360 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 41 )
+animation = "titleIn"
+
+[node name="Start" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = 540.0
+margin_right = 192.0
+margin_bottom = 648.0
+rect_pivot_offset = Vector2( 192, 54 )
+focus_mode = 0
+custom_styles/hover = SubResource( 42 )
+custom_styles/pressed = SubResource( 43 )
+custom_styles/disabled = SubResource( 43 )
+custom_styles/normal = SubResource( 43 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_disabled = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Author" type="Label" parent="."]
+margin_left = 100.0
+margin_top = 1080.0
+margin_right = 287.001
+margin_bottom = 1120.0
+custom_fonts/font = ExtResource( 4 )
+text = "by Katsuhira"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -455.0
+margin_top = 540.0
+margin_right = -165.0
+margin_bottom = 620.0
+rect_pivot_offset = Vector2( 192, 54 )
+focus_mode = 0
+theme = SubResource( 44 )
+custom_styles/hover = SubResource( 45 )
+custom_styles/pressed = SubResource( 46 )
+custom_styles/disabled = SubResource( 46 )
+custom_styles/normal = SubResource( 47 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color_disabled = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -145.667
+margin_top = 540.0
+margin_right = 144.333
+margin_bottom = 620.0
+rect_pivot_offset = Vector2( 144, 40 )
+focus_mode = 0
+theme = SubResource( 48 )
+custom_styles/hover = SubResource( 49 )
+custom_styles/pressed = SubResource( 50 )
+custom_styles/disabled = SubResource( 50 )
+custom_styles/normal = SubResource( 51 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color_disabled = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Credits" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 165.0
+margin_top = 540.0
+margin_right = 455.0
+margin_bottom = 619.999
+rect_pivot_offset = Vector2( 192, 54 )
+focus_mode = 0
+theme = SubResource( 44 )
+custom_styles/hover = SubResource( 45 )
+custom_styles/pressed = SubResource( 46 )
+custom_styles/disabled = SubResource( 47 )
+custom_styles/normal = SubResource( 47 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color_disabled = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Version" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -163.0
+margin_right = -97.9998
+margin_bottom = 40.0001
+custom_fonts/font = ExtResource( 4 )
+text = "v0.5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Start = SubResource( 52 )
+[connection signal="animation_finished" from="TitleSequence" to="." method="_on_TitleSequence_animation_finished"]

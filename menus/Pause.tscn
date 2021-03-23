@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://misc/font40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://misc/font64.tres" type="DynamicFont" id=2]
+[ext_resource path="res://menus/Pause.gd" type="Script" id=3]
+
+[node name="Pause" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1920.0
+margin_bottom = -1080.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 570.0
+margin_top = 470.0
+margin_right = 1350.0
+margin_bottom = 620.0
+color = Color( 0.113725, 0.815686, 0.85098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseTitle" type="Label" parent="."]
+margin_right = 1920.0
+margin_bottom = 1050.0
+custom_fonts/font = ExtResource( 2 )
+text = "Pause"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Key" type="Label" parent="PauseTitle"]
+margin_top = 555.0
+margin_right = 1920.0
+margin_bottom = 604.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

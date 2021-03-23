@@ -1,0 +1,368 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://misc/KeyRemapButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://misc/font56.tres" type="DynamicFont" id=2]
+[ext_resource path="res://misc/font40.tres" type="DynamicFont" id=3]
+[ext_resource path="res://menus/Menu_Controls.gd" type="Script" id=4]
+[ext_resource path="res://misc/VarelaRound-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://menus/Reset.gd" type="Script" id=6]
+[ext_resource path="res://misc/font64.tres" type="DynamicFont" id=7]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=8]
+size = 24
+font_data = ExtResource( 5 )
+
+[node name="Menu_Controls" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.113725, 0.815686, 0.85098, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+margin_bottom = -922.0
+rect_min_size = Vector2( 1920, 78 )
+custom_fonts/font = ExtResource( 7 )
+text = "Controls"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 815.0
+margin_top = 900.0
+margin_right = -815.0
+margin_bottom = -100.0
+rect_min_size = Vector2( 290, 80 )
+rect_pivot_offset = Vector2( 144, 40 )
+focus_mode = 0
+theme = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_disabled = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Ingame" type="Label" parent="."]
+margin_left = 255.0
+margin_top = 190.0
+margin_right = 454.0
+margin_bottom = 247.0
+custom_fonts/font = ExtResource( 2 )
+text = "Ingame"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up" type="Label" parent="Ingame"]
+margin_top = 100.0
+margin_right = 172.0
+margin_bottom = 149.0
+custom_fonts/font = ExtResource( 3 )
+text = "Up"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyRemapButton" parent="Ingame/Up" instance=ExtResource( 1 )]
+margin_left = 155.0
+margin_right = 398.0
+action_name = "Up"
+button = 1
+
+[node name="KeyRemapButton2" parent="Ingame/Up" instance=ExtResource( 1 )]
+margin_left = 410.0
+margin_right = 653.0
+action_name = "Up"
+button = 3
+
+[node name="Down" type="Label" parent="Ingame"]
+margin_top = 180.0
+margin_right = 172.0
+margin_bottom = 229.0
+custom_fonts/font = ExtResource( 3 )
+text = "Down"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyRemapButton" parent="Ingame/Down" instance=ExtResource( 1 )]
+margin_left = 155.0
+margin_right = 398.0
+action_name = "Down"
+button = 1
+
+[node name="KeyRemapButton2" parent="Ingame/Down" instance=ExtResource( 1 )]
+margin_left = 410.0
+margin_right = 653.0
+action_name = "Down"
+button = 3
+
+[node name="Left" type="Label" parent="Ingame"]
+margin_top = 260.0
+margin_right = 172.0
+margin_bottom = 309.0
+custom_fonts/font = ExtResource( 3 )
+text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyRemapButton" parent="Ingame/Left" instance=ExtResource( 1 )]
+margin_left = 155.0
+margin_right = 398.0
+action_name = "Left"
+button = 1
+
+[node name="KeyRemapButton2" parent="Ingame/Left" instance=ExtResource( 1 )]
+margin_left = 410.0
+margin_right = 653.0
+action_name = "Left"
+button = 3
+
+[node name="Right" type="Label" parent="Ingame"]
+margin_top = 340.0
+margin_right = 172.0
+margin_bottom = 389.0
+custom_fonts/font = ExtResource( 3 )
+text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyRemapButton" parent="Ingame/Right" instance=ExtResource( 1 )]
+margin_left = 155.0
+margin_right = 398.0
+action_name = "Right"
+button = 1
+
+[node name="KeyRemapButton2" parent="Ingame/Right" instance=ExtResource( 1 )]
+margin_left = 410.0
+margin_right = 653.0
+action_name = "Right"
+button = 3
+
+[node name="Dash" type="Label" parent="Ingame"]
+margin_top = 420.0
+margin_right = 220.0
+margin_bottom = 469.0
+custom_fonts/font = ExtResource( 3 )
+text = "Dash"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyRemapButton" parent="Ingame/Dash" instance=ExtResource( 1 )]
+margin_left = 155.0
+margin_right = 398.0
+action_name = "Dash"
+button = 1
+
+[node name="KeyRemapButton2" parent="Ingame/Dash" instance=ExtResource( 1 )]
+margin_left = 410.0
+margin_right = 653.0
+action_name = "Dash"
+button = 3
+
+[node name="Shortcuts" type="Label" parent="."]
+margin_left = 1005.0
+margin_top = 190.0
+margin_right = 1262.0
+margin_bottom = 247.0
+custom_fonts/font = ExtResource( 2 )
+text = "Shortcuts"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Label" parent="Shortcuts"]
+margin_top = 100.0
+margin_right = 172.0
+margin_bottom = 149.0
+custom_fonts/font = ExtResource( 3 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyRemapButton" parent="Shortcuts/Start" instance=ExtResource( 1 )]
+margin_left = 155.0
+margin_right = 398.0
+action_name = "Start"
+button = 1
+
+[node name="KeyRemapButton2" parent="Shortcuts/Start" instance=ExtResource( 1 )]
+margin_left = 410.0
+margin_right = 653.0
+action_name = "Start"
+button = 3
+
+[node name="Back" type="Label" parent="Shortcuts"]
+margin_top = 180.0
+margin_right = 172.0
+margin_bottom = 229.0
+custom_fonts/font = ExtResource( 3 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyRemapButton" parent="Shortcuts/Back" instance=ExtResource( 1 )]
+margin_left = 155.0
+margin_right = 398.0
+action_name = "Back"
+button = 1
+
+[node name="KeyRemapButton2" parent="Shortcuts/Back" instance=ExtResource( 1 )]
+margin_left = 410.0
+margin_right = 653.0
+action_name = "Back"
+button = 3
+
+[node name="Pause" type="Label" parent="Shortcuts"]
+margin_top = 260.0
+margin_right = 172.0
+margin_bottom = 309.0
+custom_fonts/font = ExtResource( 3 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyRemapButton" parent="Shortcuts/Pause" instance=ExtResource( 1 )]
+margin_left = 155.0
+margin_right = 398.0
+action_name = "Pause"
+button = 1
+
+[node name="KeyRemapButton2" parent="Shortcuts/Pause" instance=ExtResource( 1 )]
+margin_left = 410.0
+margin_right = 653.0
+action_name = "Pause"
+button = 3
+
+[node name="Reset" type="Button" parent="." groups=[
+"KeyRemapButton",
+]]
+margin_left = 1470.0
+margin_top = 610.0
+margin_right = 1659.0
+margin_bottom = 660.0
+focus_mode = 0
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+disabled = true
+enabled_focus_mode = 0
+text = "Reset Buttons"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Reset" to="Reset" method="_on_Reset_pressed"]

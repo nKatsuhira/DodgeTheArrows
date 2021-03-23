@@ -1,0 +1,406 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://misc/font40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://misc/font56.tres" type="DynamicFont" id=2]
+[ext_resource path="res://misc/unchecked.png" type="Texture" id=3]
+[ext_resource path="res://misc/checked.png" type="Texture" id=4]
+[ext_resource path="res://menus/Menu_Options.gd" type="Script" id=5]
+[ext_resource path="res://misc/font64.tres" type="DynamicFont" id=6]
+[ext_resource path="res://misc/font20.tres" type="DynamicFont" id=7]
+[ext_resource path="res://menus/slider_grabber.png" type="Texture" id=8]
+
+[sub_resource type="Theme" id=8]
+
+[sub_resource type="StyleBoxFlat" id=9]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=10]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=11]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=12]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id=14]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 2.0
+content_margin_bottom = 0.0
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=15]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 2.0
+content_margin_bottom = 0.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=16]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 2.0
+content_margin_bottom = 0.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=17]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 2.0
+content_margin_bottom = 0.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+expand_margin_left = 7.0
+expand_margin_right = 7.0
+
+[sub_resource type="StyleBoxFlat" id=19]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 15.0
+content_margin_bottom = 15.0
+bg_color = Color( 1, 1, 1, 1 )
+border_width_top = 5
+border_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id=20]
+default_font = ExtResource( 7 )
+HSlider/icons/grabber = ExtResource( 8 )
+HSlider/icons/grabber_disabled = ExtResource( 8 )
+HSlider/icons/grabber_highlight = ExtResource( 8 )
+HSlider/icons/tick = ExtResource( 8 )
+HSlider/styles/grabber_area = null
+HSlider/styles/grabber_area_highlight = null
+HSlider/styles/slider = SubResource( 13 )
+MenuButton/colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+MenuButton/colors/font_color_disabled = Color( 1, 1, 1, 1 )
+MenuButton/colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+MenuButton/colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+MenuButton/constants/hseparation = 3
+MenuButton/fonts/font = ExtResource( 1 )
+MenuButton/styles/disabled = SubResource( 14 )
+MenuButton/styles/focus = null
+MenuButton/styles/hover = SubResource( 15 )
+MenuButton/styles/normal = SubResource( 16 )
+MenuButton/styles/pressed = SubResource( 17 )
+PopupMenu/colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+PopupMenu/colors/font_color_accel = Color( 0.113725, 0.815686, 0.85098, 1 )
+PopupMenu/colors/font_color_disabled = Color( 1, 1, 1, 1 )
+PopupMenu/colors/font_color_hover = Color( 1, 1, 1, 1 )
+PopupMenu/constants/hseparation = 4
+PopupMenu/constants/vseparation = 4
+PopupMenu/fonts/font = ExtResource( 1 )
+PopupMenu/icons/checked = null
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_unchecked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = SubResource( 18 )
+PopupMenu/styles/labeled_separator_left = null
+PopupMenu/styles/labeled_separator_right = null
+PopupMenu/styles/panel = SubResource( 19 )
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+
+[sub_resource type="StyleBoxFlat" id=21]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=22]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=23]
+content_margin_top = 8.0
+content_margin_bottom = 5.0
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Menu_Options" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.113725, 0.815686, 0.85098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+margin_bottom = -922.0
+rect_min_size = Vector2( 1920, 78 )
+custom_fonts/font = ExtResource( 6 )
+text = "Options"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 815.0
+margin_top = 900.0
+margin_right = -815.0
+margin_bottom = -99.9999
+rect_min_size = Vector2( 290, 80 )
+rect_pivot_offset = Vector2( 144, 40 )
+focus_mode = 0
+theme = SubResource( 8 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/disabled = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Resolution" type="Label" parent="."]
+margin_left = 475.0
+margin_top = 270.0
+margin_right = 760.0
+margin_bottom = 339.0
+custom_fonts/font = ExtResource( 2 )
+text = "Resolution"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dropdown" type="MenuButton" parent="Resolution"]
+margin_left = 645.0
+margin_top = 5.0
+margin_right = 965.0
+margin_bottom = 60.0
+theme = SubResource( 20 )
+text = "1080p"
+flat = false
+align = 0
+items = [ "720p", null, 0, false, false, 0, 0, null, "", false, "900p", null, 0, false, false, 1, 0, null, "", false, "1080p", null, 0, false, false, 2, 0, null, "", false, "1440p", null, 0, false, false, 3, 0, null, "", false, "1800p", null, 0, false, false, 4, 0, null, "", false, "2160p", null, 0, false, false, 5, 0, null, "", false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen" type="Label" parent="."]
+margin_left = 475.0
+margin_top = 350.0
+margin_right = 760.0
+margin_bottom = 419.0
+custom_fonts/font = ExtResource( 2 )
+text = "Fullscreen"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="Fullscreen"]
+margin_left = 918.0
+margin_top = 6.0
+margin_right = 1016.0
+margin_bottom = 104.0
+rect_scale = Vector2( 0.5, 0.5 )
+focus_mode = 0
+custom_icons/checked = ExtResource( 4 )
+custom_icons/unchecked = ExtResource( 3 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WriteSaveData" type="Label" parent="."]
+margin_left = 475.0
+margin_top = 637.0
+margin_right = 903.0
+margin_bottom = 706.0
+custom_fonts/font = ExtResource( 2 )
+text = "Write Save Data"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="WriteSaveData"]
+margin_left = 918.0
+margin_top = 6.0
+margin_right = 1016.0
+margin_bottom = 104.0
+rect_scale = Vector2( 0.5, 0.5 )
+focus_mode = 0
+custom_icons/checked = ExtResource( 4 )
+custom_icons/unchecked = ExtResource( 3 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Directory" type="Button" parent="WriteSaveData"]
+margin_left = 2.0
+margin_top = 65.0
+margin_right = 155.0
+margin_bottom = 108.0
+focus_mode = 0
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 23 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_hover = Color( 0.113725, 0.815686, 0.85098, 1 )
+custom_colors/font_color_pressed = Color( 0.113725, 0.815686, 0.85098, 1 )
+enabled_focus_mode = 0
+text = "Open Folder"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="Label" parent="."]
+margin_left = 477.0
+margin_top = 479.0
+margin_right = 636.0
+margin_bottom = 536.0
+custom_fonts/font = ExtResource( 2 )
+text = "Audio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="Audio"]
+margin_left = 3.00003
+margin_top = 27.0
+margin_right = 1923.0
+margin_bottom = 227.0
+rect_scale = Vector2( 0.5, 0.5 )
+theme = SubResource( 20 )
+value = 69.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Audio"]
+margin_left = 869.0
+margin_top = 16.0
+margin_right = 963.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "69"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="toggled" from="Fullscreen/CheckBox" to="." method="_on_Fullscreen_CheckBox_toggled"]
+[connection signal="toggled" from="WriteSaveData/CheckBox" to="." method="_on_WriteSaveData_CheckBox_toggled"]
+[connection signal="pressed" from="WriteSaveData/Directory" to="." method="_on_WriteSaveData_Directory_pressed"]
+[connection signal="value_changed" from="Audio/HSlider" to="." method="_on_Audio_HSlider_value_changed"]

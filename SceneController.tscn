@@ -1,0 +1,572 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://SceneController.gd" type="Script" id=1]
+[ext_resource path="res://misc/music/Number0.ogg" type="AudioStream" id=2]
+[ext_resource path="res://menus/Menu_Main.tscn" type="PackedScene" id=3]
+[ext_resource path="res://misc/font32.tres" type="DynamicFont" id=4]
+[ext_resource path="res://misc/font56.tres" type="DynamicFont" id=5]
+[ext_resource path="res://misc/music/MoltenSnow.ogg" type="AudioStream" id=6]
+[ext_resource path="res://misc/music/HalfHeartedRevolution.ogg" type="AudioStream" id=7]
+[ext_resource path="res://misc/sounds/button_in.ogg" type="AudioStream" id=8]
+[ext_resource path="res://misc/sounds/dash.ogg" type="AudioStream" id=9]
+[ext_resource path="res://misc/sounds/death.ogg" type="AudioStream" id=10]
+[ext_resource path="res://misc/sounds/button_out.ogg" type="AudioStream" id=11]
+[ext_resource path="res://misc/sounds/start.ogg" type="AudioStream" id=12]
+[ext_resource path="res://misc/sounds/reflect.ogg" type="AudioStream" id=13]
+[ext_resource path="res://misc/sounds/input.ogg" type="AudioStream" id=14]
+[ext_resource path="res://misc/sounds/dash_reload.ogg" type="AudioStream" id=15]
+[ext_resource path="res://misc/sounds/reflect_nonp.ogg" type="AudioStream" id=16]
+[ext_resource path="res://misc/sounds/trail.ogg" type="AudioStream" id=17]
+[ext_resource path="res://misc/sounds/button_fail.ogg" type="AudioStream" id=18]
+
+[sub_resource type="Animation" id=1]
+resource_name = "MenuFadeIn"
+length = 0.25
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Music/Menu:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -80, 0, 0, 0, 79, 0, 0, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.25 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "MenuFadeOut"
+length = 0.25
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Music/Menu:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, 0, 0, 0.1, 0, -80, -0.0514939, 79.5, 0, 0 ),
+"times": PoolRealArray( 0, 0.25 )
+}
+
+[sub_resource type="Animation" id=3]
+length = 2.2
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Text:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -40, 0, 0, 0.25, 0, 93, -0.25, 0, 0, 0, 93, 0, 0, 0.25, 0, -40, -0.25, 0, 0, 0 ),
+"times": PoolRealArray( 0.2, 0.55, 1.85, 2.2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Data created" ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 2.2
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Text:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -40, 0, 0, 0.25, 0, 93, -0.25, 0, 0, 0, 93, 0, 0, 0.25, 0, -40, -0.25, 0, 0, 0 ),
+"times": PoolRealArray( 0.2, 0.55, 1.85, 2.2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Data deleted" ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 2.2
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Text:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -40, 0, 0, 0.25, 0, 93, -0.25, 0, 0, 0, 93, 0, 0, 0.25, 0, -40, -0.25, 0, 0, 0 ),
+"times": PoolRealArray( 0.2, 0.55, 1.85, 2.2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Data loaded" ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 2.2
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Text:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -40, 0, 0, 0.25, 0, 93, -0.25, 0, 0, 0, 93, 0, 0, 0.25, 0, -40, -0.25, 0, 0, 0 ),
+"times": PoolRealArray( 0.2, 0.55, 1.85, 2.2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Data saved" ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.5
+step = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 960, -0.25, 0, 0.4, 0, -960, -0.4, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 540, 0, 0, 0.4, 0, 540, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -960, -0.25, 0, 0.4, 0, 960, -0.4, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 540, 0, 0, 0.4, 0, 540, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 960, -0.25, 0, 0.4, 0, 2880, -0.4, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 540, -0.25, 0, 0.25, 0, 540, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2880, -0.25, 0, 0.4, 0, 960, -0.4, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 540, -0.25, 0, 0.25, 0, 540, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -540, 0, 0, 0.4, 0, 540, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("../Z_Index/Score:rect_position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("../Z_Index/Score:rect_position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -775, 0, 0, 0.4, 0, -2130.04, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.5
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -1620, 0, 0, 0.4, 0, -540, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("../Z_Index/Score:rect_position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("../Z_Index/Score:rect_position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -2130.04, 0, 0, 0.4, 0, -775, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -540, 0, 0, 0.4, 0, -1620, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("../Z_Index/Score:rect_position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("../Z_Index/Score:rect_position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -775, 0, 0, 0.4, 0, -2130.04, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../Z_Index/Score:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../Z_Index/Score:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -2330.04, 0, 0, 0.4, 0, -2130.04, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 540, 0, 0, 0.4, 0, 1620, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=16]
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1620, 0, 0, 0.4, 0, 540, -0.4, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[node name="SceneController" type="Node2D"]
+pause_mode = 1
+script = ExtResource( 1 )
+
+[node name="Music" type="AnimationPlayer" parent="."]
+anims/MenuFadeIn = SubResource( 1 )
+anims/MenuFadeOut = SubResource( 2 )
+
+[node name="Menu" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Ingame" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 6 )
+
+[node name="Gameover" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 7 )
+
+[node name="FX_Death" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 10 )
+bus = "SoundFX"
+
+[node name="FX_Dash" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 9 )
+bus = "SoundFX"
+
+[node name="FX_DashReload" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 15 )
+bus = "SoundFX"
+
+[node name="FX_ButtonIn" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 8 )
+bus = "SoundFX"
+
+[node name="FX_ButtonFail" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 18 )
+bus = "SoundFX"
+
+[node name="FX_ButtonOut" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 11 )
+bus = "SoundFX"
+
+[node name="FX_Reflect" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 13 )
+bus = "SoundFX"
+
+[node name="FX_ReflectNonP" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 16 )
+bus = "SoundFX"
+
+[node name="FX_Trail" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 17 )
+bus = "SoundFX"
+
+[node name="FX_Start" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 12 )
+bus = "SoundFX"
+
+[node name="FX_Input" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 14 )
+bus = "SoundFX"
+
+[node name="SettingsSaved" type="CanvasLayer" parent="."]
+
+[node name="Text" type="Label" parent="SettingsSaved"]
+margin_left = 98.0
+margin_top = -40.0
+margin_right = 326.0
+margin_bottom = 3.05176e-05
+custom_fonts/font = ExtResource( 4 )
+text = "Data created"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animation" type="AnimationPlayer" parent="SettingsSaved"]
+anims/created = SubResource( 3 )
+anims/deleted = SubResource( 4 )
+anims/loaded = SubResource( 5 )
+anims/saved = SubResource( 6 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 960, 540 )
+current = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+anims/ControlsIn = SubResource( 7 )
+anims/ControlsOut = SubResource( 8 )
+anims/CreditsIn = SubResource( 9 )
+anims/CreditsOut = SubResource( 10 )
+anims/GameMenu = SubResource( 11 )
+anims/GameOver = SubResource( 12 )
+anims/GameRetry = SubResource( 13 )
+anims/GameStart = SubResource( 14 )
+anims/OptionsIn = SubResource( 15 )
+anims/OptionsOut = SubResource( 16 )
+
+[node name="Menu_Main" parent="." instance=ExtResource( 3 )]
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 1920, 1080 )
+
+[node name="Background" parent="Menu_Main" index="0"]
+color = Color( 0.113725, 0.815686, 0.85098, 1 )
+
+[node name="Z_Index" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Score" type="Label" parent="Z_Index"]
+margin_top = -2130.04
+margin_right = 1920.0
+margin_bottom = -2073.04
+custom_fonts/font = ExtResource( 5 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="finished" from="Music/Gameover" to="." method="_on_GameoverMusic_finished"]
+[connection signal="pressed" from="Menu_Main/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Menu_Main/Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="Menu_Main/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="Menu_Main/Credits" to="." method="_on_Credits_pressed"]
+
+[editable path="Menu_Main"]

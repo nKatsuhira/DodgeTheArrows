@@ -1,0 +1,10 @@
+[gd_resource type="AudioBusLayout" format=2]
+
+[resource]
+bus/0/volume_db = -10.3707
+bus/1/name = "SoundFX"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = -2.04808
+bus/1/send = "Master"

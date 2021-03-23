@@ -1,0 +1,146 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://misc/music.ogg" type="AudioStream" id=1]
+[ext_resource path="res://menus/Menu_Main.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SceneController.gd" type="Script" id=3]
+[ext_resource path="res://misc/font32.tres" type="DynamicFont" id=4]
+
+[sub_resource type="Animation" id=1]
+length = 2.2
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Text:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -40, 0, 0, 0.25, 0, 93, -0.25, 0, 0, 0, 93, 0, 0, 0.25, 0, -40, -0.25, 0, 0, 0 ),
+"times": PoolRealArray( 0.2, 0.55, 1.85, 2.2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Data created" ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 2.2
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Text:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -40, 0, 0, 0.25, 0, 93, -0.25, 0, 0, 0, 93, 0, 0, 0.25, 0, -40, -0.25, 0, 0, 0 ),
+"times": PoolRealArray( 0.2, 0.55, 1.85, 2.2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Data deleted" ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 2.2
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Text:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -40, 0, 0, 0.25, 0, 93, -0.25, 0, 0, 0, 93, 0, 0, 0.25, 0, -40, -0.25, 0, 0, 0 ),
+"times": PoolRealArray( 0.2, 0.55, 1.85, 2.2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Data loaded" ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 2.2
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Text:rect_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -40, 0, 0, 0.25, 0, 93, -0.25, 0, 0, 0, 93, 0, 0, 0.25, 0, -40, -0.25, 0, 0, 0 ),
+"times": PoolRealArray( 0.2, 0.55, 1.85, 2.2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Data saved" ]
+}
+
+[node name="SceneController" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="SettingsSaved" type="CanvasLayer" parent="."]
+
+[node name="Text" type="Label" parent="SettingsSaved"]
+margin_left = 98.0
+margin_top = -40.0
+margin_right = 326.0
+margin_bottom = 3.05176e-05
+custom_fonts/font = ExtResource( 4 )
+text = "Data created"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animation" type="AnimationPlayer" parent="SettingsSaved"]
+anims/created = SubResource( 1 )
+anims/deleted = SubResource( 2 )
+anims/loaded = SubResource( 3 )
+anims/saved = SubResource( 4 )
+
+[node name="Menu_Main" parent="." instance=ExtResource( 2 )]
+margin_right = 1920.0
+margin_bottom = 1080.0
+[connection signal="pressed" from="Menu_Main/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Menu_Main/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="Menu_Main/Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="Menu_Main/Credits" to="." method="_on_Credits_pressed"]
+
+[editable path="Menu_Main"]

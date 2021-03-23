@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://enemies/trail.png" type="Texture" id=1]
+[ext_resource path="res://enemies/Fly.gd" type="Script" id=2]
+[ext_resource path="res://enemies/normal.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": false,
+"name": "normal",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "trail",
+"speed": 0.0
+} ]
+
+[node name="Fly" type="KinematicBody2D" groups=[
+"Fly",
+]]
+pause_mode = 1
+collision_layer = 6
+collision_mask = 2147483648
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.42, 0.42 )
+frames = SubResource( 1 )
+animation = "normal"
+
+[node name="Reflect" type="Area2D" parent="."]
+gravity = 0.0
+linear_damp = 0.0
+angular_damp = 0.0
+collision_layer = 4
+collision_mask = 5
+
+[node name="Collision" type="CollisionPolygon2D" parent="Reflect"]
+pause_mode = 1
+scale = Vector2( 0.47, 0.47 )
+polygon = PoolVector2Array( 85.8952, 0, -85.8952, -86, -85.8952, 86 )
+
+[node name="Collision" type="CollisionPolygon2D" parent="."]
+pause_mode = 1
+scale = Vector2( 0.4, 0.4 )
+polygon = PoolVector2Array( 85.8952, 0, -85.8952, -86, -85.8952, 86 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -8, 0 )
+scale = Vector2( 3.2, 1 )
+
+[node name="ReflectTimer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+autostart = true
+
+[node name="TrailTimer" type="Timer" parent="."]
+wait_time = 0.125
+
+[node name="ReflectBlinkTimer" type="Timer" parent="."]
+wait_time = 0.001
+one_shot = true
+[connection signal="area_entered" from="Reflect" to="." method="_on_Reflect_body_entered"]
+[connection signal="body_entered" from="Reflect" to="." method="_on_Reflect_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="ReflectTimer" to="." method="_on_ReflectTimer_timeout"]
+[connection signal="timeout" from="TrailTimer" to="." method="_on_TrailTimer_timeout"]
+[connection signal="timeout" from="ReflectBlinkTimer" to="." method="_on_ReflectBlinkTimer_timeout"]

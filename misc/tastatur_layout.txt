@@ -1,0 +1,47 @@
+MENU:
+	START/RETRY:
+		UP
+		SPACE
+		ENTER
+		KPENTER
+
+	BACK:
+		HOME
+		ESCAPE
+		BACKSPACE
+	
+	CONTROLS:
+		LEFT
+		A
+		C
+		STRG + ALT + '
+
+	OPTIONS:
+		DOWN
+		S
+		O
+		STRG + ,
+
+	CREDITS:
+		RIGHT
+		D
+		PAUSE
+	
+WHILE_INGAME:
+	MOVE:
+		W, A, S, D
+		UP, DOWN, LEFT, RIGHT
+
+	DASH:
+		SPACE
+		ENTER
+		KPENTER
+		SHIFT
+	
+	TRIGGER_GAMEOVER:
+		END
+
+	PAUSE (?):
+		PAUSE
+		ESCAPE
+	
